@@ -1,24 +1,59 @@
 package com.jeluchu.qwanx.models.images
 
+import com.google.gson.annotations.SerializedName
+
 data class ResultEntity(
-    val filters: FiltersEntity,
-    val items: List<ItemEntity>,
-    val lastPage: Boolean,
-    val total: Int
+    @SerializedName("filters")
+    val filters: FiltersEntity?,
+
+    @SerializedName("items")
+    val items: List<ItemEntity>?,
+
+    @SerializedName("lastPage")
+    val lastPage: Boolean?,
+
+    @SerializedName("total")
+    val total: Int?
 ) {
     data class ItemEntity(
-        val _id: String,
-        val height: Int,
-        val media: String,
-        val media_fullsize: String,
-        val media_preview: String,
-        val size: String,
-        val thumb_height: Int,
-        val thumb_type: String,
-        val thumb_width: Int,
-        val thumbnail: String,
-        val title: String,
-        val url: String,
-        val width: Int
+
+        @SerializedName("_id")
+        val id: String?,
+
+        @SerializedName("height")
+        val height: Int?,
+
+        @SerializedName("media")
+        val media: String?,
+
+        @SerializedName("media_fullsize")
+        val fullSize: String?,
+
+        @SerializedName("media_preview")
+        val preview: String?,
+
+        @SerializedName("size")
+        val size: String?,
+
+        @SerializedName("thumb_height")
+        val thumbHeight: Int?,
+
+        @SerializedName("thumb_type")
+        val thumbType: String?,
+
+        @SerializedName("thumb_width")
+        val thumbWidth: Int?,
+
+        @SerializedName("thumbnail")
+        val thumbnail: String?,
+
+        @SerializedName("title")
+        val title: String?,
+
+        @SerializedName("url")
+        val url: String?,
+
+        @SerializedName("width")
+        val width: Int?
     )
 }

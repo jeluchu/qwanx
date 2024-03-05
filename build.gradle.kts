@@ -14,7 +14,7 @@ repositories {
 }
 
 group = "com.jeluchu.qwanx"
-version = "1.0.0-alpha01"
+version = "1.0.0-alpha02"
 
 dependencies {
     implementation(libs.bundles.gson)
@@ -48,7 +48,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.jeluchu"
             artifactId = "qwanx"
-            version = "1.0.0-alpha01"
+            version = "1.0.0-alpha02"
 
             from(components["kotlin"])
         }

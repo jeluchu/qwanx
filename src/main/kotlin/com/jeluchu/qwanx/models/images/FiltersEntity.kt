@@ -1,23 +1,48 @@
 package com.jeluchu.qwanx.models.images
 
+import com.google.gson.annotations.SerializedName
+
 data class FiltersEntity(
-    val color: FilterEntity,
-    val freshness: FilterEntity,
-    val imagetype: FilterEntity,
-    val license: FilterEntity,
-    val size: FilterEntity
+    @SerializedName("color")
+    val color: FilterEntity?,
+
+    @SerializedName("freshness")
+    val freshness: FilterEntity?,
+
+    @SerializedName("imagetype")
+    val imagetype: FilterEntity?,
+
+    @SerializedName("license")
+    val license: FilterEntity?,
+
+    @SerializedName("size")
+    val size: FilterEntity?
 ) {
     data class FilterEntity(
-        val label: String,
-        val name: String,
-        val selected: String,
-        val type: String,
-        val values: List<ValueEntity>
+        @SerializedName("label")
+        val label: String?,
+
+        @SerializedName("name")
+        val name: String?,
+
+        @SerializedName("selected")
+        val selected: String?,
+
+        @SerializedName("type")
+        val type: String?,
+
+        @SerializedName("values")
+        val values: List<ValueEntity>?
     )
 
     data class ValueEntity(
-        val label: String,
-        val translate: Boolean,
-        val value: String
+        @SerializedName("label")
+        val label: String?,
+
+        @SerializedName("translate")
+        val translate: Boolean?,
+
+        @SerializedName("value")
+        val value: String?
     )
 }
